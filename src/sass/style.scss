@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
 .container {
@@ -16,6 +17,7 @@ body{
 
 @import 'blocks/header';
 @import 'blocks/promo';
+@import 'blocks/advantages';
 @import 'blocks/buttons';
 
 
