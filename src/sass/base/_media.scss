@@ -69,6 +69,7 @@
                 }
             }
         }
+        
     }
 }
 @media (max-width: 576px) {
@@ -109,6 +110,23 @@
             &__item_subheader {
                 font-size: 18px;
             }
+        }
+        .consultation {
+            padding: 25px 0 25px 0;
+            &__descr {
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+        .title {
+            &_left {
+                text-align: center;
+                font-size: 30px;
+            }
+        }
+        .feed-form {
+            margin: 0 auto;
+            margin-top: 36px;
         }
     }
 }

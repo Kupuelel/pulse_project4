@@ -6,6 +6,7 @@
     max-width: 950px;
     margin: 0 auto;
     padding: 0;
+    position: relative;
 }
 body{
     margin: 0;
@@ -23,6 +24,8 @@ body{
 @import 'blocks/title';
 @import 'blocks/consultation';
 @import 'blocks/forms';
+@import 'blocks/carousel';
+@import 'blocks/catalog';
 
 
 
