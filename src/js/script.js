@@ -142,6 +142,41 @@ $(document).ready(function(){
     validateForms('#order form');
     validateForms('#consultation form');
 
+    $('input[name=phone]').mask("+375 (99) 999-99-99");
+
+    $('form').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find("input").val("");
+
+
+        $('form').trigger('reset');
+      });
+      return false;
+    });
+
+    //smooth scroll
+
+    $(window).scroll(function() {
+      if($(this).scrollTop() > 1600) {
+        $('.pageup').fadeIn();
+      }else {
+        $('.pageup').fadeOut();
+      }
+    });
+    $("a.pageup").click(function() {
+      var elementClick = $(this).attr("href")
+      var destination = $(elementClick).offset().top;
+      jQuery("html:not(:animated),body:not(:animated)").animate({
+        scrollTop: destination
+      }, 800);
+      return false;
+    });
+    new WOW().init();
   };
 
   
