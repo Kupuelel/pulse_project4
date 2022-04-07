@@ -36,8 +36,44 @@
         }
     }
 }
+@media (max-width: 886px) {
+    .carousel>.container {
+        width: 500px;
+        img {
+            width: 100%;
+        }
+    }
+
+
+    
+}
 @media (max-width: 768px) {
     body {
+        .review{
+            &-item {
+                margin-bottom: 36px;
+                img {
+                    width: 120px;
+                    height: 120px;
+                }
+                &__info {
+                    margin-left: 15px;
+                }
+            }
+            hr {
+                margin: 25px 0 25px 0;
+            }
+            
+        }
+        .catalog {
+            &__content {
+                justify-content: center;
+            }
+            &-item {
+                width: 350px;
+                height: 490px;
+            }
+        }
         .container {
             width: 540px;
         }
@@ -74,8 +110,63 @@
 }
 @media (max-width: 576px) {
     body {
+        .footer {
+            &__info {
+                width: 100%;
+            }
+        }
+        .review {
+            hr {
+                margin: 10px 0 10px 0;
+            }
+            &-item {
+                flex-direction: column;
+                img {
+                    margin: 0 auto;
+                }
+                &__name {
+                    text-align: center;
+                    margin-top: 5px;
+                }
+                &__marathon {
+                    text-align: center;
+                    margin-top: 5px;
+                }
+                &__descr {
+                    font-size: 15px;
+                    margin-top: 10px;
+                }
+            }
+            
+        }
+        .catalog {
+            &__tabs {
+                flex-direction: row;
+            }
+            &__tab {
+                font-size: 10px;
+            }
+        }
+        .carousel>.container {
+            width: 315px;
+        }
         .container {
             width: 315px;
+        }
+        .carousel {
+            
+                .prev {
+                    top: auto;
+                    bottom: -100px;
+                    left: 20%;
+                }
+                .next {
+                    top: auto;
+                    bottom: -100px;
+                    right: 20%;
+                }
+               
+            
         }
         .header {
             &__official {
@@ -129,4 +220,29 @@
             margin-top: 36px;
         }
     }
+}
+@media (max-width: 320px) {
+    body {
+        .catalog {
+            &__tabs {
+                flex-direction: column;
+            }
+            &__tab {
+                margin-top: 5px;
+            }
+        }
+        .container {
+            margin: 0 auto;
+        }
+        .overlay {
+            .modal {
+                &__close {
+                    top: 15px;
+                    right: 35px;
+                }
+            }
+        }
+        
+    }
+    
 }
